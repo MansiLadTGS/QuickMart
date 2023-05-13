@@ -1,6 +1,7 @@
 import Image from "../nillkin-case-1.jpg";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+//import { Image1 } from "../Images";
 
 function Product(props) {
   const price = 10000;
@@ -33,7 +34,7 @@ function Product(props) {
             className="card-img-top bg-dark cover"
             height="200"
             alt=""
-            src={Image}
+            src={props.image}
           />
         </Link>
         <div className="card-body">

@@ -4,6 +4,19 @@ import ProductH from "./ProductH";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import ScrollToTopOnMount from "../template/ScrollToTopOnMount";
+import Image from "../nillkin-case-1.jpg";
+import Image1 from "../Images/BuyButterflyPrintedGlass.jpg";
+import Image2 from "../Images/ChandlerArtPhoneCase.jpg";
+import Image3 from "../Images/NimbusPhoneCase.jpg";
+import Image4 from "../Images/Tribal-Art-Marvel-Official.jpg";
+import Image5 from "../Images/WorthGlassCase.jpg";
+import Image6 from "../Images/iPhone14XProMaxBackCase.jpg";
+import Image7 from "../Images/iShockUltraThinTransparentShine.jpg";
+import Image8 from "../Images/images (12).jpg";
+import Image9 from "../Images/nillkin-case-1.jpg";
+import Image10 from "../Images/download.jpg";
+import Image11 from "../Images/nillkin-case.jpg";
+
 
 const categories = [
   "All Products",
@@ -14,6 +27,9 @@ const categories = [
   "Power Banks",
 ];
 
+const imageList = [Image, Image1, Image2, Image3, Image4, Image5, Image6, Image7, Image8, Image9, Image10, Image];
+
+
 const brands = ["Apple", "Samsung", "Google", "HTC"];
 
 const manufacturers = ["HOCO", "Nillkin", "Remax", "Baseus"];
@@ -21,7 +37,7 @@ const manufacturers = ["HOCO", "Nillkin", "Remax", "Baseus"];
 function FilterMenuLeft() {
   return (
     <ul className="list-group list-group-flush rounded">
-      <li className="list-group-item d-none d-lg-block">
+      {/* <li className="list-group-item d-none d-lg-block">
         <h5 className="mt-1 mb-2">Browse</h5>
         <div className="d-flex flex-wrap my-2">
           {categories.map((v, i) => {
@@ -91,7 +107,7 @@ function FilterMenuLeft() {
           </div>
           <button className="btn btn-dark">Apply</button>
         </div>
-      </li>
+      </li> */}
     </ul>
   );
 }
@@ -221,11 +237,11 @@ function ProductList() {
                 "row row-cols-1 row-cols-md-2 row-cols-lg-2 g-3 mb-4 flex-shrink-0 " +
                 (viewType.grid ? "row-cols-xl-3" : "row-cols-xl-2")
               }
-            >
+            >                             
               {Array.from({ length: 10 }, (_, i) => {
                 if (viewType.grid) {
                   return (
-                    <Product key={i} percentOff={i % 2 === 0 ? 15 : null} />
+                    <Product image={imageList[i]} key={i} percentOff={i % 2 === 0 ? 15 : null} />
                   );
                 }
                 return (

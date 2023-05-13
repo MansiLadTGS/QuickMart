@@ -12,41 +12,10 @@ function ProductDetail() {
 
   return (
     <div className="container mt-5 py-4 px-xl-5">
-      <ScrollToTopOnMount/>
-      <nav aria-label="breadcrumb" className="bg-custom-light rounded mb-4">
-        <ol className="breadcrumb p-3">
-          <li className="breadcrumb-item">
-            <Link className="text-decoration-none link-secondary" to="/products">
-              All Prodcuts
-            </Link>
-          </li>
-          <li className="breadcrumb-item">
-            <a className="text-decoration-none link-secondary" href="!#">
-              Cases &amp; Covers
-            </a>
-          </li>
-          <li className="breadcrumb-item active" aria-current="page">
-            Nillkin iPhone X cover
-          </li>
-        </ol>
-      </nav>
+      <ScrollToTopOnMount/>     
       <div className="row mb-4">
         <div className="d-none d-lg-block col-lg-1">
-          <div className="image-vertical-scroller">
-            <div className="d-flex flex-column">
-              {Array.from({ length: 10 }, (_, i) => {
-                let selected = i !== 1 ? "opacity-6" : "";
-                return (
-                  <a key={i} href="!#">
-                    <img
-                      className={"rounded mb-2 ratio " + selected}
-                      alt=""
-                      src={Image}
-                    />
-                  </a>
-                );
-              })}
-            </div>
+          <div className="image-vertical-scroller">            
           </div>
         </div>
         <div className="col-lg-6">
@@ -59,29 +28,6 @@ function ProductDetail() {
               />
             </div>
           </div>
-
-          {/* <div className="row mt-2">
-            <div className="col-12">
-              <div
-                className="d-flex flex-nowrap"
-                style={{ overflowX: "scroll" }}
-              >
-                {Array.from({ length: 8 }, (_, i) => {
-                  return (
-                    <a key={i} href="!#">
-                      <img
-                        className="cover rounded mb-2 me-2"
-                        width="70"
-                        height="70"
-                        alt=""
-                        src={Image}
-                      />
-                    </a>
-                  );
-                })}
-              </div>
-            </div>
-          </div> */}
         </div>
 
         <div className="col-lg-5">
@@ -94,10 +40,7 @@ function ProductDetail() {
                 <button className="btn btn-outline-dark py-2 w-100">
                   Add to cart
                 </button>
-              </div>
-              <div className="col">
-                <button className="btn btn-dark py-2 w-100">Buy now</button>
-              </div>
+              </div>              
             </div>
 
             <h4 className="mb-0">Details</h4>
@@ -159,20 +102,6 @@ function ProductDetail() {
                 feeling.
               </small>
             </p>
-          </div>
-        </div>
-      </div>
-
-      <div className="row">
-        <div className="col-md-12 mb-4">
-          <hr />
-          <h4 className="text-muted my-4">Related products</h4>
-          <div className="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-3">
-            {Array.from({ length: 4 }, (_, i) => {
-              return (
-                <RelatedProduct key={i} percentOff={i % 2 === 0 ? 15 : null} />
-              );
-            })}
           </div>
         </div>
       </div>
