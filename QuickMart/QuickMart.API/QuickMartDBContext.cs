@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-namespace QuickMart.Infrastructure
+namespace QuickMart.API
 {
     public partial class QuickMartDBContext : DbContext
     {
