@@ -1,6 +1,5 @@
 using Microsoft.EntityFrameworkCore;
 using QuickMart.API;
-using QuickMart.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 
