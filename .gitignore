@@ -1,0 +1,14 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/QuickMart/QuickMart.API/obj/Debug/net6.0
+/QuickMart/QuickMart.API/obj
+/QuickMart/QuickMart.Core/obj/Debug/net6.0
+/QuickMart/QuickMart.Core/obj
+/QuickMart/QuickMart.Infrastructure/obj/Debug/net6.0
+/QuickMart/QuickMart.Infrastructure/obj
+/QuickMart/QuickMart.Library/obj/Debug/net6.0
+/QuickMart/QuickMart.Library/obj
+/QuickMart/.vs/QuickMart
+/.vs
