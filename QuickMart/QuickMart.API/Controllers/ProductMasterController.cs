@@ -38,7 +38,8 @@ namespace QuickMart.API.Controllers
             try
             {
 
-                return Ok();
+                var model = _productMasterService.SaveProduct(productMaster);
+                return Ok(model);
             }
             catch (Exception)
             {

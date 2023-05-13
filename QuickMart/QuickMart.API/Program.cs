@@ -1,5 +1,9 @@
 using Microsoft.EntityFrameworkCore;
-using QuickMart.API;
+using QuickMart.Infrastructure;
+using QuickMart.Core.Repository;
+using QuickMart.Core.Service;
+using QuickMart.Infrastructure.Repository;
+using QuickMart.Infrastructure.Service;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,6 +16,8 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddTransient<IProductMasterRepository, ProductMasterRepository>();
+builder.Services.AddTransient<IProductMasterService, ProductMasterService>();
 
 var app = builder.Build();
 
