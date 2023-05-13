@@ -9,6 +9,11 @@ namespace QuickMart.Core.Service
 {
     public interface IProductMasterService
     {
-       
+        ResponseModel SaveProduct(ProductMaster productMaster);
+
+        List<ProductMaster> GetProductList();
+        ProductMaster GetProductDetailsById(int prodId);
+
+        ResponseModel DeleteProduct(int prodId);
     }
 }

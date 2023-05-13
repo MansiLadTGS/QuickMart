@@ -9,5 +9,11 @@ namespace QuickMart.Core.Repository
 {
     public interface IProductMasterRepository
     {
+        void SaveProduct(ProductMaster productMaster);
+
+        List<ProductMaster> GetProductList();
+        ProductMaster GetProductDetailsById(int prodId);
+
+        void DeleteProduct(int prodId);
     }
 }
