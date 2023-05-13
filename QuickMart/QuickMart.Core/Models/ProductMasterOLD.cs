@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace QuickMart.API.Models;
+namespace QuickMart.Core.Models;
 
-public partial class ProductMaster
+public partial class ProductMasterOLD
 {
     public long ProductId { get; set; }
 
