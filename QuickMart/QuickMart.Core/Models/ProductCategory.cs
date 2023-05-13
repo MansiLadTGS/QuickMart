@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace QuickMart.API.Models;
+namespace QuickMart.Core.Models;
 
 public partial class ProductCategory
 {
@@ -11,5 +11,5 @@ public partial class ProductCategory
 
     public bool? Active { get; set; }
 
-    public virtual ICollection<ProductMasterOLD> ProductMasters { get; set; } = new List<ProductMasterOLD>();
+    public virtual ICollection<ProductMaster> ProductMasters { get; set; } = new List<ProductMaster>();
 }

@@ -1,15 +1,13 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using QuickMart.Core.Models;
 
-namespace QuickMart.API
+namespace QuickMart.Infrastructure
 {
     public partial class QuickMartDBContext : DbContext
     {
         public QuickMartDBContext(DbContextOptions<QuickMartDBContext> dbContextOptions) : base(dbContextOptions)
         {
         }
-        protected override void OnModelCreating(ModelBuilder builder)
-        {
-            base.OnModelCreating(builder);
-        }
+        public DbSet<ProductMaster> Products { get; set; }
     }
 }

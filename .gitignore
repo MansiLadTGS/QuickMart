@@ -12,3 +12,9 @@
 /QuickMart/QuickMart.Library/obj
 /QuickMart/.vs/QuickMart
 /.vs
+/QuickMart/QuickMart.API/bin/Debug/net6.0
+/QuickMart/QuickMart.Core/bin/Debug/net6.0
+/QuickMart/QuickMart.Infrastructure/bin/Debug/net6.0
+/QuickMart/QuickMart.Library/bin/Debug/net6.0
+/QuickMart/.vs/ProjectEvaluation
+/QuickMart/QuickMart.API/QuickMart.API.csproj.user

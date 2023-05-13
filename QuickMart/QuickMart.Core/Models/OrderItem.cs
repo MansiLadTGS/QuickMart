@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace QuickMart.API.Models;
+namespace QuickMart.Core.Models;
 
 public partial class OrderItem
 {

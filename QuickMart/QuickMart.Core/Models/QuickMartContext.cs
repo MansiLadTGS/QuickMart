@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 
-namespace QuickMart.API.Models;
+namespace QuickMart.Core.Models;
 
 public partial class QuickMartContext : DbContext
 {
@@ -29,7 +29,7 @@ public partial class QuickMartContext : DbContext
 
     public virtual DbSet<ProductCategory> ProductCategories { get; set; }
 
-    public virtual DbSet<ProductMasterOLD> ProductMasters { get; set; }
+    public virtual DbSet<ProductMaster> ProductMasters { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
@@ -189,7 +189,7 @@ public partial class QuickMartContext : DbContext
             entity.Property(e => e.Name).HasMaxLength(100);
         });
 
-        modelBuilder.Entity<ProductMasterOLD>(entity =>
+        modelBuilder.Entity<ProductMaster>(entity =>
         {
             entity.HasKey(e => e.ProductId);
 
